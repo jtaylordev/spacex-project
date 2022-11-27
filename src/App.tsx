@@ -1,12 +1,8 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-const NoPage = () => (
-  <div>
-    <h1>No Page</h1>
-  </div>
-)
 function App() {
-  const [page, setPage] = React.useState(false);
+
   
   return (
     <div>

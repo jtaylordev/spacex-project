@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider, InMemoryCache, HttpLink} from '@apollo/client';
-
+import { router } from './route';
+import { RouterProvider } from 'react-router-dom';
 const httpLink = new HttpLink({
   uri: "https://api.spacex.land/graphql/"
 })
@@ -20,7 +21,7 @@ const root = ReactDOM.createRoot(
 console.log(client)
 root.render(
   <ApolloProvider client={client}>
-    <App />
+    <RouterProvider router={router} />
   </ApolloProvider>
 );
 
